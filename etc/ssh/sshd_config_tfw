@@ -1,0 +1,15 @@
+Port 2223
+AuthorizedKeysFile /etc/ssh/authorized_keys
+PermitRootLogin no
+PrintLastLog no
+PasswordAuthentication yes
+ChallengeResponseAuthentication no
+UsePrivilegeSeparation no
+StrictModes no
+HostKey /etc/ssh/ssh_user_ed25519_key
+HostKey /etc/ssh/ssh_user_ecdsa_key
+HostKey /etc/ssh/ssh_user_rsa_key
+Subsystem sftp internal
+X11Forwarding no
+UsePAM yes
+UseDNS no

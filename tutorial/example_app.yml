@@ -1,0 +1,40 @@
+---
+dashboard:
+  stepToFirstStateAutomatically: true
+  messageSpeed: 400 # Word per minute
+  layout: terminal-ide-web
+  enabledLayouts:  
+    - terminal-ide-web
+    - terminal-ide-vertical
+    - terminal-ide-horizontal
+    - terminal-web
+    - ide-web-vertical
+    - terminal-only
+    - ide-only
+    - web-only
+webservice:
+  iframeUrl: /webservice
+  showUrlBar: false
+  reloadIframeOnDeploy: false
+terminal:
+  directory: /home/user/terminal
+  terminalMenuItem: terminal # terminal / console
+ide:
+  patterns: 
+   - /home/user/tutorial/*
+  showDeployButton: true
+  deployButtonText:
+    TODEPLOY:  Deploy
+    DEPLOYED:  Deployed
+    DEPLOYING: Reloading app...
+    FAILED:    Deployment failed
+
+#### States and messages ####
+states:
+ -
+  messages:
+   - "Message queue message"
+   - "Multiline message queue message.
+
+   See?"
+  
