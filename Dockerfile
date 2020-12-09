@@ -8,7 +8,7 @@ RUN pip3 install \
         pyzmq==19.0.2 \
         tornado==6.0.4 \
         pyyaml \
-        git+https://github.com/avatao-content/tfwsdk-python.git@318ce905398c988831001d72c47fb437f282228a
+        git+https://github.com/avatao-content/tfwsdk-python.git@0e9d9953f564f78d9bdce0cf70791053b4ede125
         
 COPY tutorial /home/user/tutorial
 COPY etc /etc
