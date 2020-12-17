@@ -10,12 +10,12 @@ RUN pip3 install \
         pyyaml \
         git+https://github.com/avatao-content/tfwsdk-python.git@0e9d9953f564f78d9bdce0cf70791053b4ede125
         
-COPY tutorial /home/user/tutorial
+COPY tutorial /.tutorial
 COPY etc /etc
 
 RUN chown -R user:user /home/user
 
-ONBUILD COPY solvable/tutorial /home/user/tutorial
-ONBUILD RUN python3 /home/user/tutorial/create_app_from_yml.py
+ONBUILD COPY solvable/tutorial /.tutorial
+ONBUILD RUN python3 /.tutorial/create_app_from_yml.py
 
 CMD exec supervisord --nodaemon --configuration /etc/supervisor/supervisord.conf
