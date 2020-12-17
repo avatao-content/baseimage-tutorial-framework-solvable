@@ -16,6 +16,7 @@ COPY etc /etc
 RUN chown -R user:user /home/user
 
 ONBUILD COPY solvable/tutorial /.tutorial
-ONBUILD RUN python3 /.tutorial/create_app_from_yml.py
+ONBUILD RUN python3 /.tutorial/create_app_from_yml.py && chown -R root:root /.tutorial
+ONBUILD VOLUME ["/.tutorial"]
 
 CMD exec supervisord --nodaemon --configuration /etc/supervisor/supervisord.conf
