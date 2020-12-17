@@ -4,7 +4,7 @@ import copy
 import json
 import os
 
-os.chdir(os.path.dirname(os.path.realpath(__file__)))
+os.chdir('/.tutorial')
 
 logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.DEBUG)
 LOG = logging.getLogger()
