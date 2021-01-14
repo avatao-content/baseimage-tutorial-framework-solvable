@@ -100,11 +100,11 @@ def get_frontend_config(config: dict):
     LOG.info('Generating frontend config...')
     frontend_config = copy.deepcopy(config)
     # Removing unnecessary stuff
-    frontend_config.pop('stepToFirstStateAutomatically')
     frontend_config.pop('webservice')
     frontend_config.pop('terminal')
     frontend_config.pop('states')
     frontend_config['dashboard'].pop('messageSpeed')
+    frontend_config['dashboard'].pop('stepToFirstStateAutomatically')
     frontend_config['ide'].pop('patterns')
     # Addig/reorganizing necessary stuff
     frontend_config['dashboard']['hideMessages'] = False
