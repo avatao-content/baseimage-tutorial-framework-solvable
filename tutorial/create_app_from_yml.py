@@ -100,6 +100,7 @@ def get_frontend_config(config: dict):
     LOG.info('Generating frontend config...')
     frontend_config = copy.deepcopy(config)
     # Removing unnecessary stuff
+    frontend_config.pop('stepToFirstStateAutomatically')
     frontend_config.pop('webservice')
     frontend_config.pop('terminal')
     frontend_config.pop('states')
