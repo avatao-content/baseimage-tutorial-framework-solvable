@@ -194,7 +194,7 @@ class App(LinearFSM):
     else:
         return False
 
-config = open_and_parse_config('app.yml')
+config = open_and_parse_config('tfw.yml')
 if not config:
     exit(1)
 if not validate_config(config):
