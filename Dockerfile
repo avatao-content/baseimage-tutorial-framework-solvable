@@ -1,6 +1,6 @@
 FROM avatao/debian:buster
 
-RUN apt-get update && \
+RUN apt-get --allow-releaseinfo-change-suite update && \
     apt-get install -qy --no-install-recommends \
         supervisor
 
