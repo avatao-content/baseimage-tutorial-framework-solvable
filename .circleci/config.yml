@@ -33,3 +33,8 @@ jobs:
             deploy-docker-image.py
             "${CIRCLE_PROJECT_REPONAME//baseimage-/}:${CIRCLE_BRANCH}"
             "${CIRCLE_WORKING_DIRECTORY/#\~/$HOME}"
+      - run:
+          name: Re-build all dependant exercises
+          command: >-
+            rebuild_dependant_repos.py
+            "${CIRCLE_PROJECT_REPONAME//baseimage-/}:${CIRCLE_BRANCH}"
